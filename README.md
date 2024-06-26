@@ -1,27 +1,16 @@
-# Image Object Detection
+# Image Object Detection Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
+This is my first project written in angular; it's a bit messy. Regardless, some functionality is available - it is currently capable of working with the [back-end]([url](https://github.com/xoabperez/image-object-detection)) to add images, display images, and filter images by objects.
 
-## Development server
+## Requirements
+[Node.js v20.15.0](https://nodejs.org/en) and [Angular CLI v18.0.0](https://angular.dev/tools/cli/setup-local) were used for this project. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Setup
+The back-end should be running on `localhost:8080`, otherwise the following files will need to be updated (sorry): `src/app/images/single-image/single-image.component.html` and `src/app/images/images.service.ts`. 
 
-## Code scaffolding
+Run the following commands to install dependencies and start the local development server: 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+npm install
+npm start
+```
