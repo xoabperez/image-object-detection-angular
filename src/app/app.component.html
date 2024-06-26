@@ -1,0 +1,37 @@
+@if(isUploadingImage){
+  <app-upload-image (close)="onEndUpload()" />
+}
+
+
+<header class="site-header">
+    <div class="HeaderbarContainer-left">
+      <div class="Headerbar-logo-container">
+        <h1 class="Headerbar-logo-header">
+          <img src="logo.png" alt="Magnifying glass" width="40" height="40" viewBox="0 0 40 40" class="icon stroke fill" fill="none" />
+          <span>PictureID</span>
+        </h1>
+      </div>
+    </div>
+  
+    <div class="HeaderbarContainer-center">
+      <div class="Searchbar">
+        <form class="Searchbar-form" (ngSubmit)="onSubmit()">
+          <input placeholder="Search for images based on tags" type="text" class="Searchbar-textInput" style="height: 36px;" name="q" value="" [(ngModel)]="enteredSearch">
+          <button type="submit" class="Searchbar-submitInput">
+            <img class="search" src="search.svg">
+          </button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="HeaderbarContainer-right">
+      <button class="Button upload" (click)="onStartUpload()">
+        <img src="plus.svg" hspace="5px">
+        <span>Add Image</span>
+      </button>
+    </div>
+</header>
+
+<main>
+  <app-available-images [objects]="objects()"/>
+</main>

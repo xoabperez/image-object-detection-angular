@@ -1,0 +1,9 @@
+<ul>
+  @for (image of images(); track image.id) {
+    <li class="image-item">
+      <button (click)="onSelectImage(image)">
+        <app-single-image [image]="image" />
+      </button>
+    </li>
+  }
+</ul>

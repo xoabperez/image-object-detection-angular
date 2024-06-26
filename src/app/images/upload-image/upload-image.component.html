@@ -1,0 +1,59 @@
+<div class="backdrop" (click)="onClose()"></div>
+<dialog open>
+  @if (isFailure()){
+    <div style="text-align:center">
+        <p>Sorry, the image could not be uploaded</p>
+        <button type="button" (click)="onClose()">Close</button>
+    </div>
+  } @else if(isSuccess()){
+    <app-single-image [image]="image()!" />
+  } @else if(isUploading()){
+    <p>Uploading image...</p>
+  } @else {
+    <h2>Upload Image</h2>
+    <form (ngSubmit)="onSubmit()">
+        <!-- <p>Select a file OR submit a URL</p>
+        <p>
+          <input type="file" class="file-upload" (change)="onFileSelected($event)">
+        </p> -->
+
+        <p>
+          <label class=".textlabel" for="url">URL</label>
+          <input
+              class="textinput"
+              type="text"
+              id="url"
+              name="url"
+              [(ngModel)]="enteredUrl"
+          />
+        </p>
+
+        <p>
+        <label class=".textlabel" for="label">Label</label>
+        <input
+            class="textinput"
+            type="text"
+            id="label"
+            name="label"
+            maxlength="128"
+            [(ngModel)]="enteredLabel"
+        />
+        </p>
+
+        <div>
+        <input
+            type="checkbox"
+            id="enable-object-detection"
+            name="enable-object-detection"
+            [(ngModel)]="objectDetectionEnabled"
+        />
+        <label for="enable-object-detection">Enable object detection</label>
+        </div>
+
+        <p class="actions">
+        <button type="button" (click)="onClose()">Cancel</button>
+        <button type="submit">Upload</button>
+        </p>
+    </form>
+  }
+</dialog>

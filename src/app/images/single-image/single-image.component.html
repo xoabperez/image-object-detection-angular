@@ -1,0 +1,12 @@
+<div class="image-container">
+    <div class="image-item">
+        <img
+        [src]="'http://localhost:8080/images?url=' + getUrl(image().url)"
+        [alt]="formatLabel(image().label)"
+        />
+        @if (image().objects && image().objects != ''){
+        <h3>{{ formatObjects(image().objects) }}</h3>
+        }
+        
+    </div>
+</div>

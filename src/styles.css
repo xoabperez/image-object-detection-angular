@@ -1,0 +1,242 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.5;
+
+  color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  background-color:#221e31;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+  text-align: center;
+  margin: 0 auto;
+  position: -webkit-sticky;
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #221e31 0%, #362f4d 100%);
+}
+
+.HeaderBar{
+  width: 100%;
+    z-index: 1000;
+    text-align: center;
+    margin: 0 auto;
+    padding: 13px 15px;
+    position: -webkit-sticky;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+.HeaderbarContainer-left,
+.HeaderbarContainer-right {
+    position: relative;
+    display: inline-flex
+}
+
+.HeaderbarContainer-left,
+.HeaderbarContainer-right {
+    flex: 1
+}
+
+.HeaderbarContainer-center {
+    max-width: 550px;
+    margin: auto;
+    align-items: center;
+    flex: 1;
+    justify-content: space-around;
+    min-width: 95px
+}
+
+.HeaderbarContainer-right {
+    justify-content: flex-end;
+    padding-right: 1em;
+}
+
+@media (max-width:819px) {
+
+  .NavbarContainer-left {
+      flex: 2
+  }
+  .NavbarContainer-center {
+      display: none
+  }
+}
+
+.Headerbar-logo-container {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  float: left
+}
+
+.Headerbar-logo-container .Menu {
+  top: 50px;
+  left: initial
+}
+
+.Headerbar-logo-header {
+  display: flex
+}
+
+.Headerbar-logo {
+  display: inline;
+  cursor: pointer
+}
+
+@media (max-width:678px) {
+  .HeaderBar {
+      margin: auto
+  }
+
+  .HeaderBar .Headerbar-logo img {
+      vertical-align: middle
+  }
+}
+
+@media (max-width:819px) {
+  .Headerbar {
+      padding: 11px 15px
+  }
+}
+
+.Headerbar .upload {
+  min-width: auto;
+  margin: auto 20px;
+  position: relative;
+}
+
+.Button {
+  text-align: center;
+  height: 35px;
+  display: inline-block;
+  padding: 7px 14px 10px 9px;
+  text-transform: none;
+  user-select: none;
+  touch-action: manipulation;
+  border-radius: 4px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  position: relative;
+  width: auto;
+  background-color: #1b38b7;
+  box-shadow: 0 6px 10px 0 rgba(27,28,30,.31);
+  color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+
+.Button:hover,
+.Button:active {
+  background-color: #2d47bb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.Searchbar {
+  position:relative;
+  float:right;
+  width:100%;
+  max-width:550px;
+  flex: 1;
+}
+.Searchbar-textInput {
+  background:rgba(255,255,255,.25);
+  border:1px solid transparent;
+  padding:8px 35px 8px 10px;
+  border-radius:3px;
+  width:100%;
+  outline:0;
+  opacity:.8;
+  min-height:36px;
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:.4px;
+  color:#fff;
+  text-shadow:inherit;
+  -webkit-text-fill-color:inherit
+}
+.Searchbar-textInput:focus {
+  opacity:1
+}
+.Searchbar-textInput::-webkit-input-placeholder {
+  font-weight:400;
+  color:rgba(255,255,255,.6)
+}
+.Searchbar-textInput::-moz-placeholder {
+  font-weight:400;
+  color:rgba(255,255,255,.6)
+}
+.Searchbar-submitInput {
+  position:absolute;
+  font-size:20px;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+  background:0 0;
+  color:#fff;
+  border:0;
+  outline:0;
+  padding:8px;
+  cursor:pointer
+}
+.Searchbar form {
+  width:100%
+}
+@media (max-width:678px) {
+  .NavbarContainer-center .Searchbar{
+    display:none
+  }
+}
+
+.Headerbar-upload {
+  color: #fff;
+  padding: 7px 18px 7px 12px;
+  background: #9739f0;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 15px;
+  margin: 0 20px;
+  height: 35px;
+  white-space: nowrap
+}
+
+.Headerbar-upload:before {
+  padding-right: 8px;
+  padding-left: 18px;
+  position: relative;
+  font-size: 20px;
+  top: 5px
+}
+
+

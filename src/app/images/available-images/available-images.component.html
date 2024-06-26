@@ -1,0 +1,17 @@
+<app-images-container [title]="title">
+  @if (isFetching() && !error()){
+    <p class="fallback-text">Fetching images...</p>
+  }
+
+  @if (error()) {
+    <p class="fallback-text">{{ error() }}</p>
+  }
+  
+  @if (images()) {
+    @if (!isFetching()){
+      <app-images [images]="images()!" />
+    }
+  } @else if (images().length === 0) {
+    <p class="fallback-text">No images found.</p>
+  }
+</app-images-container>
